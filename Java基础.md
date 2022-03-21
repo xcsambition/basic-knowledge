@@ -838,7 +838,7 @@ yield
 
 
 
-### 十四、Lamda表达式
+## 十四、Lamda表达式
 
 函数式编程
 
@@ -849,6 +849,89 @@ yield
 
 - 任何接口，如何只包含一个抽象方法，那么就是一个函数式接口
 - 对于函数式接口，我们可以通过lambda表达式来实现
+
+## 常见API
+
+### 包装类
+
+Integer
+
+```java
+Integer.parseInt("")将字符串转换为int类型
+Integer.valueOf("")将字符串转换为Integer类型
+Integer.intValue()将Integer对象转换为int类型
+```
+
+集合
+
+
+
+**contains**
+
+**isEmpty**
+
+Stack
+
+```java
+Stack<Object> stack = new Stack<>();//废弃的
+Deque<Object> stack = new LinkedList<>();
+stack.push();//进栈
+stack.pop();//出栈
+stack.peek();//看栈顶
+```
+
+Queue
+
+```java
+Queue<Object> queue = new LinkedList<>();
+queue.offer();//进队列
+queue.poll();//出队列
+queue.peek();//队列前面的那个
+```
+
+Set
+
+```java
+Set<Object> set = new HashMap<>();
+set.add();//加
+set.remove();//删
+```
+
+Map
+
+```java
+Map<Object,Object> map = new HashMap<>();
+map.put(key,value);
+map.get(key);//返回value
+map.remove(key);
+map.remove(key,value);
+map.containsKey();
+map.containsValue();
+遍历map
+Set<Map.Entry<Object, Object>> entries = map.entrySet();
+        for (Map.Entry<Object, Object> entry : entries) {
+            entry.getKey();
+            entry.getValue()
+        }
+Set<Object> objects = map.keySet();
+        for (Object object : objects) {
+            Object value = map.get(object);
+        }
+
+```
+
+
+
+List
+
+```java
+List<Integer> list = new LinkedList<>();
+add
+remove
+get()
+```
+
+
 
 
 
